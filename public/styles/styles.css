@@ -1,0 +1,67 @@
+body {
+  font-family: "Poppins", sans-serif;
+
+}
+h1 {
+  font-weight: 600;
+  font-size: 3.8rem;
+  
+}
+body{
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+
+.times ul{
+  background-color: #a80038;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  color: white;
+   
+  }
+  .visit-hr{
+    border-top: 2px solid #fff; 
+  }
+  
+  .times-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;    
+  }
+  .times-list a{
+    background-color: #fff;
+  }
+  /* .times-list a:hover{
+    background-color: yellow;
+  } */
+
+  
+  #visit{
+    color:  white;
+  }
+  
+  .visit-section{
+  display: flex;
+  justify-content: center;  
+  margin-top: 4rem;
+   background-color: #FCDE9C;
+   gap: 6rem;
+   padding-top: 6rem;
+   padding-bottom: 6rem;
+  
+}
+.visit-img{
+  height: auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+

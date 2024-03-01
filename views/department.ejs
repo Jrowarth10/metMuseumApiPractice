@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.content){ %>
+    <% content.filter(element => element.primaryImage).forEach(element => { %>
+        <img src="<%= element.primaryImage %>"  width="200">
+        <h3>
+            <%= element.title %>
+        </h3>
+        <h4>
+            <%= element.artistDisplayName %>
+        </h4>
+        <h4>            
+            <%= element.artistDisplayBio %>
+        </h4>
+        <h4>
+            <%= element.objectDate %>
+            
+        </h4>
+        
+        <% }); %>
+        <% } %>
+
+
+<%- include("partials/footer.ejs") %>
