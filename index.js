@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", async (req, res) => {
   try {
     const result = await axios.get(`${API_DEPARTMENTS_URL}4`);
-    const objectIds = result.data.objectIDs.slice(1999, 2000); // Limiting to first 10 object IDs for demonstration
+    const objectIds = result.data.objectIDs.slice(0, 10); // Limiting to first 10 object IDs for demonstration
 
     // Fetch details for each object in parallel
     const artWork = objectIds.map(async (objectId) => {
@@ -25,6 +25,7 @@ app.get("/", async (req, res) => {
 
     // Wait for all requests to complete
     const artDetails = await Promise.all(artWork);
+    console.log(artDetails)
 
     res.render("index.ejs", { content: artDetails });
   } catch (error) {
@@ -32,6 +33,28 @@ app.get("/", async (req, res) => {
     res.status(500).send("Error fetching data.");
   }
 });
+app.get("/department", async (req, res) => {
+  try {
+    const result = await axios.get(`${API_DEPARTMENTS_URL}4`);
+    const objectIds = result.data.objectIDs.slice(0, 10); // Limiting to first 10 object IDs for demonstration
+
+    // Fetch details for each object in parallel
+    const artWork = objectIds.map(async (objectId) => {
+      const response = await axios.get(`${API_URL}${objectId}`);
+      return response.data;
+    });
+
+    // Wait for all requests to complete
+    const artDetails = await Promise.all(artWork);
+    console.log(artDetails)
+
+    res.render("department.ejs", { content: artDetails });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error fetching data.");
+  }
+});
+
 
 // app.get("/", async (req, res) => {
 //   try {

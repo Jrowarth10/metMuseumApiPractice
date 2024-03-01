@@ -1,6 +1,6 @@
 <%- include("partials/header.ejs") %>
 
-<% if(locals.content){ %>
+<% if(content){ %>
     <% content.filter(element => element.primaryImage).forEach(element => { %>
         <img src="<%= element.primaryImage %>"  width="200">
         <h3>

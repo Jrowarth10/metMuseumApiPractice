@@ -13,24 +13,35 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    
 
-  $(document).ready(function() {
-  $(".department-card").click(async function() {
-    const departmentId = $(this).attr("id"); // Extract department ID from card's ID
-    
-    try {
-      // Send a POST request to the server with the department ID using Axios
-      const response = await axios.post("/submit", { departmentId });
-      // Handle the response as needed
-      console.log(response.data); // Assuming the server responds with relevant data
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  });
+
+<script>
+// jQuery document ready function
+$(document).ready(function() {
+    // Attach click event handler to div elements
+    $(".department-card").click(function() {
+        // Get the id of the clicked div
+        var divId = $(this).attr("id");
+        console.log(divId)
+        
+        // Send an AJAX POST request to the server
+        $.ajax({
+            url: "/submit",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({ id: divId }),
+            success: function(response) {
+                // Handle success response from the server
+                console.log("Data successfully submitted:", response);
+            },
+            error: function(xhr, status, error) {
+                // Handle error response from the server
+                console.error("Error submitting data:", error);
+            }
+        });
+    });
 });
+
 </script>
 </body>
 </html>

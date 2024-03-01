@@ -46,7 +46,7 @@
 
 <div class="row">
         <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="1">
+            <div class="department-card" id="3">
                 <img src="/images/American Decorative Arts.jpg" alt="picture of native american statue"width="200">
                 <h4>American Decorative arts</h4>
             </div>
@@ -58,13 +58,13 @@
             </div>
         </div>
         <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="5">
+            <div class="department-card" id="6">
                 <img src="/images/Arts of Africa.jpg" alt="picture of African masks" width="200">
                 <h4>Arts of Africa, Oceania, and the Americas</h4>
             </div>
         </div>
         <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="6">
+            <div class="department-card" id="7">
                 <img src="/images/Asian Art.jpg"  alt="statues of Buddha from Thailand" width="200">
                 <h4>Asian Art</h4>
             </div>
@@ -72,7 +72,7 @@
     </div>
 
 </section>
-<% if(locals.content){ %>
+<!-- <% if(locals.content){ %>
     <% content.filter(element => element.primaryImage).forEach(element => { %>
         <img src="<%= element.primaryImage %>"  width="200">
         <h3>
@@ -90,7 +90,7 @@
         </h4>
         
         <% }); %>
-        <% } %>
+        <% } %> -->
 
 
 <%- include("partials/footer.ejs") %>
