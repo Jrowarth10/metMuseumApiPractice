@@ -15,7 +15,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
-<script>
+<!-- <script>
 // jQuery document ready function
 $(document).ready(function() {
     // Attach click event handler to div elements
@@ -24,12 +24,11 @@ $(document).ready(function() {
         var divId = $(this).attr("id");
         console.log(divId)
         
-        // Send an AJAX POST request to the server
+        // Send an AJAX POST request to the server with the department ID as a parameter
         $.ajax({
-            url: "/submit",
+            url: `/submit/${divId}`, // Construct the URL with the department ID
             type: "POST",
             contentType: "application/json",
-            data: JSON.stringify({ id: divId }),
             success: function(response) {
                 // Handle success response from the server
                 console.log("Data successfully submitted:", response);
@@ -42,6 +41,6 @@ $(document).ready(function() {
     });
 });
 
-</script>
+</script> -->
 </body>
 </html>

@@ -43,33 +43,36 @@
 <section class="container mt-4">
 
     <h2>Browse the gallery</h2>
+    <form action="/submit" method="POST">
 
-<div class="row">
+      
+      <div class="row">
         <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="3">
-                <img src="/images/American Decorative Arts.jpg" alt="picture of native american statue"width="200">
-                <h4>American Decorative arts</h4>
+            <div class="department-card" >
+              <img src="/images/American Decorative Arts.jpg" alt="picture of native american statue"width="200">
+              <button class="btn depChoice"  type="submit" value="3" name="departmentChoice">  <h4>American Decorative arts</h4></button>
             </div>
-        </div>
-        <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="4">
-                <img src="/images/arms and armor.jpg" alt="picture of Egyptian pharaoh coffin"width="200" >
-                <h4>Arms and Armor</h4>
+          </div>
+          <div class="col-md-3"> <!-- Adjust column width based on your preference -->
+            <div class="department-card" >
+              <img src="/images/arms and armor.jpg" alt="picture of Egyptian pharaoh coffin"width="200" >
+              <button class="btn depChoice" type="submit" value="4" name="departmentChoice"><h4>Arms and Armor</h4></button>
             </div>
-        </div>
-        <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="6">
-                <img src="/images/Arts of Africa.jpg" alt="picture of African masks" width="200">
-                <h4>Arts of Africa, Oceania, and the Americas</h4>
+          </div>
+          <div class="col-md-3"> <!-- Adjust column width based on your preference -->
+            <div class="department-card" >
+              <img src="/images/Arts of Africa.jpg" alt="picture of African masks" width="200">
+              <button class="btn depChoice" type="submit" value="6" name="departmentChoice"><h4>Arts of Africa, Oceania, and the Americas</h4> </button>
             </div>
-        </div>
-        <div class="col-md-3"> <!-- Adjust column width based on your preference -->
-            <div class="department-card" id="7">
-                <img src="/images/Asian Art.jpg"  alt="statues of Buddha from Thailand" width="200">
-                <h4>Asian Art</h4>
+          </div>
+          <div class="col-md-3"> <!-- Adjust column width based on your preference -->
+            <div class="department-card ">
+              <img src="/images/Asian Art.jpg"  alt="statues of Buddha from Thailand" width="200">
+              <button class="btn depChoice" type="submit" value="7" name="departmentChoice"> <h4>Asian Art</h4> </button>
             </div>
+          </div>
         </div>
-    </div>
+      </form>
 
 </section>
 <!-- <% if(locals.content){ %>
