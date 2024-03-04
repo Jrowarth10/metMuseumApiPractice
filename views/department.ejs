@@ -1,24 +1,54 @@
 <%- include("partials/header.ejs") %>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="imageModal"
+  tabindex="-1"
+  aria-labelledby="imageModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="" class="modal-img img-fluid" alt="Large Image" />
+      </div>
+    </div>
+  </div>
+</div>
 
-<% if(content){ %>
-    <% content.filter(element => element.primaryImage).forEach(element => { %>
-        <img src="<%= element.primaryImage %>"  width="200">
-        <h3>
-            <%= element.title %>
-        </h3>
-        <h4>
-            <%= element.artistDisplayName %>
-        </h4>
-        <h4>            
-            <%= element.artistDisplayBio %>
-        </h4>
-        <h4>
-            <%= element.objectDate %>
-            
-        </h4>
-        
-        <% }); %>
-        <% } %>
+<!-- Title -->
+<div class="text-center my-5">
 
+    <% if(content){%>
+        <h1>
+            <%= content[1].department %>
+        </h1>
+    <%} %>
+</div>
+
+<!-- CARDS -->
+<div class="container">
+  <div class="row">
+    <% if(content){ %> <% content.filter(element =>
+    element.primaryImage).forEach(element => { %>
+    <div class="col-3 my-3">
+      <div class="card h-100 display-card">
+        <img
+          src="<%= element.primaryImage %>"
+          class="card-img-top display-img"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-text"><%= element.title %></h5>
+          <p class="card-text"><%= element.country %></p>
+          <p class="card-text"><%= element.objectDate %></p>
+        </div>
+      </div>
+    </div>
+
+    <% }); %> <% } %>
+  </div>
+</div>
 
 <%- include("partials/footer.ejs") %>
+

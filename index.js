@@ -43,7 +43,7 @@ app.post("/submit", async (req, res) => {
 
     // Fetch data for the selected department
     const result = await axios.get(`${API_DEPARTMENTS_URL}${departmentId}`);
-    const objectIds = result.data.objectIDs.slice(0, 10); // Limiting to first 10 object IDs for demonstration
+    const objectIds = result.data.objectIDs.slice(0, 20); // Limiting to first 20 object IDs for demonstration
 
     // Fetch details for each object in parallel
     const artWork = objectIds.map(async (objectId) => {
