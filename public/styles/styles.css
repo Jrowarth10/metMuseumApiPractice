@@ -14,18 +14,21 @@ h4{
 h5{
   font-size: 1.2rem;
 }
-body{
-}
+
 
 
 ul{
   list-style-type: none;
 }
+.times{
+    background-color: #a80038;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+ 
+}
 
 
 .times ul{
-  background-color: #a80038;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
   height: 100%;
   display: flex;
   justify-content: center;
@@ -52,6 +55,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   } */
 
   
+  
   #visit{
     color:  white;
   }
@@ -70,7 +74,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 .visit-img{
   height: auto;
   width: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .depChoice{  
@@ -98,4 +102,64 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
 .display-card{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* MEDIA QUERIES */
+@media(max-width:992px){
+  .times ul{
+  padding: 2rem 3rem 2rem 3rem;   
+  }
+  .visit-section{ 
+    align-items: center;
+    flex-direction: column;
+   gap: 2rem;  
+  
+}
+.visit-title{
+  text-align: center;
+}
+.visit-img{
+
+  width: 72%;
+
+}
+.times{
+ 
+  width: 72%;
+  }
+.browse-title{
+text-align: center;
+}
+h2{
+  font-size: 2.1rem;
+}
+
+}
+
+@media(max-width:768px){
+  
+  h1 { 
+    font-size: 3rem;  
+  }
+  
+  
+  h3{
+    font-size: 1.6rem;
+  }
+  
+}
+@media(max-width:576px){
+
+.visit-img{
+
+  width: 80%;
+
+}
+.times{
+ 
+  width: 80%;
+  }
+
 }
